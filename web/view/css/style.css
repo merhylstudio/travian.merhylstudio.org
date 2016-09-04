@@ -1,0 +1,70 @@
+body {
+  font: 400 15px Lato, sans-serif;
+  line-height: 1.8;
+  color: #818181;
+}
+.bg-green {
+  background-color: #1abc9c; /* Green */
+  color: #ffffff; /* white text */
+}
+.bg-darkblue {
+  background-color: #474e5d; /* dark blue */
+  color: #ffffff; /* white text */
+}
+.bg-white {
+  background-color: #ffffff; /* white */
+  color: #555555; /* gray text */
+}
+.bg-blue {
+  background-color: #000066; /* blue */
+  color: #ffffff; /* gray text */
+}
+.bg-grey {
+  background-color: #f6f6f6; /* light grey */
+  color: #555555; /* gray text */
+}
+p {
+  font-size: 16px;
+}
+h3 {
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.margin {
+  margin-bottom: 45px;
+}
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.navbar {
+  background-color: #1abc9c;
+  z-index: 9999;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  font-size: 12px !important;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.42857143 !important;
+}
+.navbar li a, .navbar .navbar-brand {
+  color: #ffffff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  background-color: #ffffff !important;
+  color: #1abc9c !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #ffffff !important;
+}
+footer .glyphicon, footer .fa {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #1abc9c;
+}
