@@ -5,14 +5,14 @@ lock '3.6.1'
 set :log_level, :debug
 
 # Remote server and website common parameters
-set :application, "www.merhylstudio.org"
+set :application, "travian.merhylstudio.org"
 set :deploy_user, "billy"
 set :deploy_to, "/app/httpd/www/#{fetch(:application)}"
 set :keep_releases, 5
 
 # Git parameters with URL to repository (can be local)
 set :scm, :git
-set :repo_url, 'https://git@github.com/merhylstudio/www.git'
+set :repo_url, 'https://git@github.com/merhylstudio/travian.git'
 #ask :branch, 'git rev-parse --abbrev-ref HEAD'.chomp
 set :branch, 'master'
 
