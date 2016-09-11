@@ -30,6 +30,3 @@ $(document).ready(function(){
   });
 
 })
-$(document).on("click",".yamm .dropdown-menu",function(e){e.stopPropagation()})
-$(window).on("load resize scroll",function()
-{return $(window).width()<1270?($(".scrollup").hide(),!1):void($(this).scrollTop()>100?$(".scrollup").fadeIn():$(".scrollup").fadeOut());})
