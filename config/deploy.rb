@@ -26,6 +26,8 @@ SSHKit.config.command_map[:composer] = "php #{shared_path.join("composer.phar")}
 # debug sur composer
 set :composer_install_flags, '--no-dev --no-interaction --optimize-autoloader'
 
+set :pty, true
+
 #############################################################
 ## FLOW
 ##
