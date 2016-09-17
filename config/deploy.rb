@@ -5,7 +5,7 @@ lock '3.6.1'
 set :log_level, :debug
 
 # Remote server and website common parameters
-set :application, "travian.merhylstudio.org"
+set :application, "travian"
 set :deploy_user, "billy"
 set :deploy_to, "/app/httpd/www/#{fetch(:application)}"
 set :keep_releases, 5
