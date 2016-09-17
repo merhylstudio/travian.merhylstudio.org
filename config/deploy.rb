@@ -27,9 +27,6 @@ SSHKit.config.command_map[:composer] = "php #{shared_path.join("composer.phar")}
 ## FLOW
 ##
 namespace :deploy do
-  # Make sure we're deploying what we think we're deploying
-  before :deploy, 'deploy:check'
-
   # Installing composer (in shared_path by default)
   after :starting, 'composer:install_executable'
 
