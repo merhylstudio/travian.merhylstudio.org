@@ -1,3 +1,5 @@
 {
-	"require": "phpauth/phpauth"
+	"require":  {
+		"phpauth/phpauth"
+	}
 }
