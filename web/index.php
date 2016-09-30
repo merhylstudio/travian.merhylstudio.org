@@ -8,7 +8,7 @@
 <!-- navbar -->
 <?php include("view/navbar.php"); ?>
 <!-- topbar -->
-<?php include("view/topbar.php"); ?>
+<?php include("view/inactiveform.php"); ?>
 <!-- corps -->
 <?php include("view/construct.php"); ?>
 <!-- footer -->

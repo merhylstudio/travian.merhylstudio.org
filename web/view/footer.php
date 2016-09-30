@@ -4,7 +4,7 @@
       <a href="http://travian.merhylstudio.org"><span class="fa fa-search logo"></span></a>
     </section>
     <section class="col-xs-12 col-sm-4">
-      <p>Copyright &copy; 2016<br /><a href="https://travian.merhylstudio.org">MerhylStudio</a> All Rights Reserved.</p>
+      <p>Copyright &copy; 2016 <a href="https://travian.merhylstudio.org">MerhylStudio</a> <br />Licensed under the Apache License, Version 2.0<br /></p>
     </section>
     <section class="col-xs-12 col-sm-4">
     <ul class="list-inline social-media">

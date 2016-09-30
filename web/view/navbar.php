@@ -19,11 +19,17 @@
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-          
-            <li><a href="#"><img class="flag" src="view/img/flags/fr.png"> ts1</a></li>
-            <li><a href="#"><img class="flag" src="view/img/flags/fr.png"> ts2</a></li>
-            <li><a href="#"><img class="flag" src="view/img/flags/fr.png"> ts3</a></li>
-            
+<?php
+include_once("./controler/serverlist.php");
+$server_list = GetServerList();
+foreach ($server_list as $country => $country_server_list)
+{
+  foreach ($country_server_list as $server)
+  {
+            echo '<li><a href="#"><img class="flag" src="view/img/flags/'.$country.'.png"> '.$server.'</a></li>'.PHP_EOL;
+  }
+}
+?>
           </ul>
         </li>
       <li><a href="#">Tools</a></li>

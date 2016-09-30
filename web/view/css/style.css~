@@ -101,7 +101,7 @@ h3 {
 }
 /* Dropdown */
 .open .dropdown-toggle {
-  color: #263859 ;
+  color: #263859 !important;
   background-color: #eff2f6 !important;
 }
 /* Dropdown links */
@@ -119,12 +119,13 @@ h3 {
   padding-bottom: 0;
 }
 footer a {
-  color: #fff;
+  color: #eff2f6;
 }
 footer a:hover {
   color: #9cf;
 }
 footer p {
+  color: #eff2f6;
   margin-top:30px;
   margin-bottom: 10px;
   font-size: 12px;
