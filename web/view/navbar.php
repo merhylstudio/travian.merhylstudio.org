@@ -20,13 +20,29 @@
           </a>
           <ul class="dropdown-menu">
 <?php
-include_once("./controler/serverlist.php");
-$server_list = GetServerList();
-foreach ($server_list as $country => $country_server_list)
+include_once("./controler/worldcookie.php");
+
+$server_list = GetWorldList();
+$ret = GetActiveWorld();
+$world = $ret[0];
+$country = $ret[1];
+
+if (isset($_GET["w"]) AND isset($_GET["c"]))
 {
-  foreach ($country_server_list as $server)
+  if (SetActiveWorld($_GET["w"], $_GET["c"]))
   {
-            echo '<li><a href="#"><img class="flag" src="view/img/flags/'.$country.'.png"> '.$server.'</a></li>'.PHP_EOL;
+    $world = $_GET["w"];
+    $country = $_GET["c"];
+  }
+}
+
+echo 'world: '.$world.'<br />country: '.$country;
+
+foreach ($server_list as $c => $country_server_list)
+{
+  foreach ($country_server_list as $w)
+  {
+            echo '<li><a href="index.php?w='.$w.'&c='.$c.'"><img class="flag" src="view/img/flags/'.$c.'.png"> '.$w.'</a></li>'.PHP_EOL;
   }
 }
 ?>

@@ -1,17 +1,22 @@
 <?php
 
-function GetServerList()
+function GetWorldList()
 {
   $ret = yaml_parse_file('../config/servers.yml');
   
   return $ret;
 }
 
-function CheckIfServerExist($server, $nation)
+function WorldExist($world, $country)
 {
-  $servers = GetServerList();
+  $world_list = GetWorldList();
   
-  if (!in_array($server, $servers[$nation])) return false;
   
-  return true;  
+  foreach ($world_list as $c => $country_world_list)
+  {
+    if (in_array($world, $country_world_list) AND $c == $country)
+      return true;
+  }
+  
+  return false;
 }

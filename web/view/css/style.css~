@@ -122,7 +122,7 @@ footer a {
   color: #eff2f6;
 }
 footer a:hover {
-  color: #9cf;
+  color: #3d5a8f;
 }
 footer p {
   color: #eff2f6;
