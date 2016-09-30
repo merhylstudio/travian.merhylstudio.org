@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="content-language" content="fr" />
 
-<link rel="icon" type="image/png" href="view/img/shark.ico" />
+<link rel="icon" type="image/png" href="view/img/search.ico" />
 
 <meta name="viewport" content="width=device-width, initialscale=1" />
 

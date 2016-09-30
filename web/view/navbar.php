@@ -8,15 +8,24 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="http://www.merhylstudio.org">
-      <img class="img-responsive logo" src="view/img/merhylstudio_small.png" alt="MerhylStudio" />
-      <span class="hidden-xs">MerhylStudio</span></a>
+    <a class="navbar-brand" href="http://travian.merhylstudio.org">
+      <span class="fa fa-search"></span></a>
   </div>
 
   <div class="collapse navbar-collapse" id="navbar">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Flow</a></li>
-      <li><a href="#">Server</a></li>
+      <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Server
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+          
+            <li><a href="#"><img class="flag" src="view/img/flags/fr.png"> ts1</a></li>
+            <li><a href="#"><img class="flag" src="view/img/flags/fr.png"> ts2</a></li>
+            <li><a href="#"><img class="flag" src="view/img/flags/fr.png"> ts3</a></li>
+            
+          </ul>
+        </li>
       <li><a href="#">Tools</a></li>
       <li><a href="#">Help</a></li>
     </ul>

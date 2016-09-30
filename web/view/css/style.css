@@ -39,6 +39,14 @@ body {
   margin-right: auto;
   padding: 0;
 }
+.flag {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 16px;
+  height: 11px;
+  background-image: url(view/img/flags/fr.png);
+}
 p {
   font-size: 16px;
 }
@@ -91,6 +99,21 @@ h3 {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #f6f6f6;
 }
+/* Dropdown */
+.open .dropdown-toggle {
+  color: #263859 !important;
+  background-color: #eff2f6 !important;
+}
+/* Dropdown links */
+.dropdown-menu li a {
+  color: #263859 !important;
+  background-color: #eff2f6 !important;
+}
+/* On hover, dropdown links */
+.dropdown-menu li a:hover {
+  color: #eff2f6 !important;
+  background-color: #3d5a8f !important;
+}
 .topbar {
   padding-top: 70px;
   padding-bottom: 0;
@@ -107,6 +130,9 @@ footer p {
   font-size: 12px;
   font-family: Montserrat, sans-serif;
   line-height: 1.42857143;
+}
+footer .logo {
+  font-size:80px;
 }
 .social-media {
   margin-top:15px;

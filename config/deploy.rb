@@ -6,7 +6,6 @@ set :log_level, :debug
 
 # Remote server and website common parameters
 set :application, "travian"
-set :deploy_user, "billy"
 set :keep_releases, 5
 set :deploy_to, "/app/httpd/www/#{fetch(:application)}"
 

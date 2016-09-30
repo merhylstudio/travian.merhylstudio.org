@@ -6,15 +6,13 @@
 </head>
 <body id="topPage">
 <!-- navbar -->
-<!-- infos -->
+<?php include("view/navbar.php"); ?>
+<!-- topbar -->
 <?php include("view/topbar.php"); ?>
 <!-- corps -->
-<div class="container-fluid bg-lightblue">
-  <div class="text-center">
-    <h1>En construction...</h1>
-  </div>
-</div>
+<?php include("view/construct.php"); ?>
 <!-- footer -->
+<?php include("view/footer.php"); ?>
 <!-- JavaScript -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
