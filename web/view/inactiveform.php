@@ -103,9 +103,9 @@ if (isset($_POST["submit"]))
     echo '<tr>';
     echo '<td>'.$it['x'].'</td>';
     echo '<td>'.$it['y'].'</td>';
-    echo '<td>'.$it['villagename'].'</td>';
-    echo '<td>'.$it['accountname'].'</td>';
-    echo '<td>'.$it['alliancename'].'</td>';
+    echo '<td>'.utf8_encode($it['villagename']).'</td>';
+    echo '<td>'.utf8_encode($it['accountname']).'</td>';
+    echo '<td>'.utf8_encode($it['alliancename']).'</td>';
     echo '<td>'.$it['population'].'</td>';
     echo '<td>'.'<a href="http://'.$world.'.travian.fr/position_details.php?x='.$it['x'].'&y='.$it['y'].'" target="_blank"><div class="normalBold">Aller au village</div></a>'.'</td>';
     echo '</tr>'.PHP_EOL;
