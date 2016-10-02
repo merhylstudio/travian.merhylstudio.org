@@ -45,13 +45,13 @@ const DATABASE = 'agenda';
      */
 private function __construct() {  
   $param = yaml_parse_file("../config/database.yml");
-  HOST = $param["dbtravian"]["host"];
-  USERNAME = $param["dbtravian"]["Wuser"];
-  PASSWORD = $param["dbtravian"]["Wpass"];
-  DATABASE = $param["dbtravian"]["inst"];
+  $host = $param["dbtravian"]["host"];
+  $user = $param["dbtravian"]["Wuser"];
+  $pass = $param["dbtravian"]["Wpass"];
+  $inst = $param["dbtravian"]["inst"];
   
   try {
-    $this->PDOInstance = new PDO('mysql:dbname='.self::DATABASE.';host='.self::HOST,self::USERNAME,self::PASSWORD);
+    $this->PDOInstance = new PDO('mysql:dbname='.$inst.';host='.$host,$user,$pass);
     $this->PDOInstance->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
   } catch (PDOException $e) {
     echo "<b>Error PDO:</b> ".$e->getMessage()."<br />\n";
@@ -215,7 +215,7 @@ public function queryFetchAllAssoc($statement) {
 public function queryFetchAllObj($statement) {
   return $this->PDOInstance->query($statement)->fetchAll(PDO::FETCH_OBJ);
 }
-  public function queryFetchAllBoth($statement) {
+public function queryFetchAllBoth($statement) {
 return $this->query($statement)->fetchAll(PDO::FETCH_BOTH);
 }
 /**

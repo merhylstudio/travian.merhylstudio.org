@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Accueil</title>
-<?php include("view/header.php"); ?>
+<?php include 'view/header.php'; ?>
 </head>
 <body id="topPage">
 
 <!-- navbar -->
-<?php include("view/navbar.php"); ?>
+<?php include 'view/navbar.php'; ?>
 
 <!-- topbar -->
-<?php include("view/inactiveform.php"); ?>
+<?php include 'view/inactiveform.php'; ?>
 
 <!-- corps -->
 <div class="container-fluid bg-lightblue">
@@ -20,7 +20,7 @@
 </div>
 
 <!-- footer -->
-<?php include("view/footer.php"); ?>
+<?php include 'view/footer.php'; ?>
 
 <!-- JavaScript -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

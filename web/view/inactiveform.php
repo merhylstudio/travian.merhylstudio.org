@@ -88,10 +88,30 @@
 <?php
 if (isset($_POST["submit"]))
 {
-  include_once '../controler/classLoader.php';
+  include_once './controler/classLoader.php';
   echo '<div class="container-fluid bg-lightblue">'.PHP_EOL;
 
+  $ret = Inactive::get($world, $sx, $sy, $sdl, $sdh, $spl, $sph);
+  
+  # Affichage
+  echo '<div class="col-xs-10 col-xs-offset-1">'.PHP_EOL;
+  echo '<table border=1 class="normal">'.PHP_EOL;
+  echo '<tr class="bgTrue titre3"><td>x</td><td>y</td><td>Village</td><td>Joueur</td><td>Alliance</td><td>Pop</td><td>Lien</td></tr>'.PHP_EOL;
 
+  while ($it = array_pop($ret))
+  {
+    echo '<tr>';
+    echo '<td>'.$it['x'].'</td>';
+    echo '<td>'.$it['y'].'</td>';
+    echo '<td>'.$it['villagename'].'</td>';
+    echo '<td>'.$it['accountname'].'</td>';
+    echo '<td>'.$it['alliancename'].'</td>';
+    echo '<td>'.$it['population'].'</td>';
+    echo '<td>'.'<a href="http://'.$world.'.travian.fr/position_details.php?x='.$it['x'].'&y='.$it['y'].'" target="_blank"><div class="normalBold">Aller au village</div></a>'.'</td>';
+    echo '</tr>'.PHP_EOL;
+  }
+  echo '</table>'.PHP_EOL;
+  echo '</div>'.PHP_EOL;
 
   echo '</div>'.PHP_EOL;
 }
