@@ -10,12 +10,15 @@
 <?php include("view/navbar.php"); ?>
 
 <!-- topbar -->
-<?php include("view/inactiveform.php"); ?>
+<div class="container-fluid bg-nightblue topbar"></div>
 
 <!-- corps -->
 <div class="container-fluid bg-lightblue">
 
-
+<div class="text-center">
+  <h1>Erreur 404</h1>
+  <p>La Page que vous cherchez n'existe pas!</p>
+</div>
 
 </div>
 

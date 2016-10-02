@@ -10,12 +10,16 @@
 <?php include("view/navbar.php"); ?>
 
 <!-- topbar -->
-<?php include("view/inactiveform.php"); ?>
+<?php include("view/topbar.php"); ?>
 
 <!-- corps -->
 <div class="container-fluid bg-lightblue">
 
-
+<div class="text-center">
+  <h1>Outils de recherche d'inactifs pour travian</h1>
+  <p>Ce site est une ébauche, il est loin d'être terminé et va demander encore beaucoup de travail.</p>
+  <p>Merci de rester patients et de m'envoyer vos critiques ou vos encouragements.</p>
+</div>
 
 </div>
 

@@ -14,3 +14,9 @@
     <a href="#" class="fa fa-arrow-circle-up scrollup">Back to the top</a>
   </div>
 </footer>
+
+<!-- Script pour "cookies" -->
+<script src="view/js/cookiechoices.js"></script><script>document.addEventListener 
+('DOMContentLoaded', function(event) { cookieChoices.showCookieConsentBar 
+('Comme la loi française m\'y oblige, je vous informe que ce site utilise des cookies pour enregistrer vos préférences',
+'Fermer'); });</script>

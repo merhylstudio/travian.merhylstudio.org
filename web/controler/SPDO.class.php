@@ -17,15 +17,15 @@ private $PDOInstance = null;
      */
 private static $instance = null;
 /**
-     * Constante: User name from the Database
-     * @var String
-     */
-const USERNAME = 'root';
-/**
      * Constante: Server host
      * @var String
      */
 const HOST     = 'localhost';
+/**
+     * Constante: User name from the Database
+     * @var String
+     */
+const USERNAME = 'root';
 /**
      * Constante: Password
      * @var String
@@ -43,7 +43,13 @@ const DATABASE = 'agenda';
      * @return void
      * @see PDO::__construct()
      */
-private function __construct() {
+private function __construct() {  
+  $param = yaml_parse_file("../config/database.yml");
+  HOST = $param["dbtravian"]["host"];
+  USERNAME = $param["dbtravian"]["Wuser"];
+  PASSWORD = $param["dbtravian"]["Wpass"];
+  DATABASE = $param["dbtravian"]["inst"];
+  
   try {
     $this->PDOInstance = new PDO('mysql:dbname='.self::DATABASE.';host='.self::HOST,self::USERNAME,self::PASSWORD);
     $this->PDOInstance->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);

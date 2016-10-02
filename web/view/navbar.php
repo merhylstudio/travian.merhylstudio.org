@@ -20,7 +20,7 @@
           </a>
           <ul class="dropdown-menu">
 <?php
-include_once("./controler/worldcookie.php");
+include_once './controler/worldcookie.php';
 
 $server_list = GetWorldList();
 $ret = GetActiveWorld();
@@ -48,8 +48,8 @@ foreach ($server_list as $c => $country_server_list)
 ?>
           </ul>
         </li>
-      <li><a href="#">Tools</a></li>
-      <li><a href="#">Help</a></li>
+      <li><a href="tools.php">Tools</a></li>
+      <li><a href="help.php">Help</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
