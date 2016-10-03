@@ -1,12 +1,12 @@
 <?php    
   if (isset($_POST["submit"]))
   {
-    if(isset($_POST["sx"]))  { $sx  = $_POST["sx"];  setcookie("sx",  $sx,  time()+240); } else $sx  = 0;
-    if(isset($_POST["sy"]))  { $sy  = $_POST["sy"];  setcookie("sy",  $sy,  time()+240); } else $sy  = 0;
-    if(isset($_POST["sdl"])) { $sdl = $_POST["sdl"]; setcookie("sdl", $sdl, time()+240); } else $sdl = 0;
-    if(isset($_POST["sdh"])) { $sdh = $_POST["sdh"]; setcookie("sdh", $sdh, time()+240); } else $sdh = 60;
-    if(isset($_POST["spl"])) { $spl = $_POST["spl"]; setcookie("spl", $spl, time()+240); } else $spl = 0;
-    if(isset($_POST["sph"])) { $sph = $_POST["sph"]; setcookie("sph", $sph, time()+240); } else $sph = 1500;
+    if(isset($_POST["sx"]))  { $sx  = $_POST["sx"];  setcookie("sx",  $sx,  time()+864000); } else $sx  = 0;
+    if(isset($_POST["sy"]))  { $sy  = $_POST["sy"];  setcookie("sy",  $sy,  time()+864000); } else $sy  = 0;
+    if(isset($_POST["sdl"])) { $sdl = $_POST["sdl"]; setcookie("sdl", $sdl, time()+864000); } else $sdl = 0;
+    if(isset($_POST["sdh"])) { $sdh = $_POST["sdh"]; setcookie("sdh", $sdh, time()+864000); } else $sdh = 60;
+    if(isset($_POST["spl"])) { $spl = $_POST["spl"]; setcookie("spl", $spl, time()+864000); } else $spl = 0;
+    if(isset($_POST["sph"])) { $sph = $_POST["sph"]; setcookie("sph", $sph, time()+864000); } else $sph = 1500;
   }
   else
   {
