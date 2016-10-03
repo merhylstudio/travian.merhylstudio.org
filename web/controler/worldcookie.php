@@ -5,8 +5,8 @@ function SetActiveWorld($world, $country)
 {
   if (!WorldExist($world, $country)) return false;
   
-  setcookie("world", $world, time()+240);
-  setcookie("country", $country, time()+240);
+  setcookie("world", $world, time()+864000);
+  setcookie("country", $country, time()+864000);
   return true;  
 }
 
