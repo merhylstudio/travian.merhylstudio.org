@@ -1,0 +1,147 @@
+--
+-- Voir les utilisateurs de mysql
+--
+SELECT User,Host,Password FROM mysql.user;
+
+--
+-- Lister les bases de mysql
+--
+SHOW DATABASES;
+
+--
+-- Créer une base pour travian
+--
+CREATE DATABASE travian CHARSET = utf8;
+
+--
+-- Lister les tables de la base travian
+--
+USE travian;
+SHOW TABLES;
+
+--
+-- Vérifier le charset d'une base
+--
+USE travian;
+SELECT @@character_set_database,@@collation_database;
+
+--
+-- Création de la table x_world
+--
+CREATE TABLE x_world (
+	fid			INT(9)		UNSIGNED NOT NULL DEFAULT 0,
+	x			SMALLINT(3)	NOT NULL DEFAULT 0,
+	y			SMALLINT(3)	NOT NULL DEFAULT 0,
+	tid			TINYINT(1)	UNSIGNED NOT NULL DEFAULT 0,
+	vid			INT(9)		UNSIGNED NOT NULL DEFAULT 0,
+	village		VARCHAR(20)	NOT NULL DEFAULT '',
+	uid			INT(9)		NOT NULL DEFAULT 0,
+	player		VARCHAR(20)	NOT NULL DEFAULT '',
+	aid			INT(9)		UNSIGNED NOT NULL DEFAULT 0,
+	alliance	VARCHAR(8)	NOT NULL DEFAULT '',
+	population	SMALLINT(4)	UNSIGNED NOT NULL DEFAULT 0,
+	UNIQUE KEY fid (fid)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+--
+-- Création de la table correspondante à x_world (exemple pour ts1)
+--
+CREATE TABLE ts1_world (
+	fid			INT(9)		UNSIGNED NOT NULL DEFAULT 0,
+	x			SMALLINT(3)	NOT NULL DEFAULT 0,
+	y			SMALLINT(3)	NOT NULL DEFAULT 0,
+	tid			TINYINT(1)	UNSIGNED NOT NULL DEFAULT 0,
+	vid			INT(9)		UNSIGNED NOT NULL DEFAULT 0,
+	village		VARCHAR(20)	NOT NULL DEFAULT '',
+	uid			INT(9)		NOT NULL DEFAULT 0,
+	player		VARCHAR(20)	NOT NULL DEFAULT '',
+	aid			INT(9)		UNSIGNED NOT NULL DEFAULT 0,
+	alliance	VARCHAR(8)	NOT NULL DEFAULT '',
+	population	SMALLINT(4)	UNSIGNED NOT NULL DEFAULT 0,
+	UNIQUE KEY fid (fid)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+--
+-- Création de la table historique (exemple pour ts1)
+--
+CREATE TABLE ts1_history (
+	fid INT(9) UNSIGNED NOT NULL DEFAULT 0,
+	x SMALLINT(3) NOT NULL DEFAULT 0,
+	y SMALLINT(3) NOT NULL DEFAULT 0,
+	tid TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
+	vid INT(9) UNSIGNED NOT NULL DEFAULT 0,
+	village VARCHAR(20) NOT NULL DEFAULT '',
+	uid INT(9) NOT NULL DEFAULT 0,
+	player VARCHAR(20) NOT NULL DEFAULT '',
+	aid INT(9) UNSIGNED NOT NULL DEFAULT 0,
+	alliance VARCHAR(8) NOT NULL DEFAULT '',
+	population SMALLINT(4) UNSIGNED NOT NULL DEFAULT 0,
+	snapdate DATE NOT NULL DEFAULT '0000-00-00',
+	UNIQUE KEY fid (fid)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+--
+-- Création de la table alliance (exemple pour ts1)
+--
+CREATE TABLE ts1_alliance (
+	aid INT(9) UNSIGNED NOT NULL DEFAULT 0,
+	alliancename VARCHAR(8) NOT NULL DEFAULT '',
+	alliancepopulation INT(6) UNSIGNED NOT NULL DEFAULT 0,
+	PRIMARY KEY aid (aid),
+	KEY alliancename (alliancename),
+	KEY alliancepopulation (alliancepopulation)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+--
+-- Création de la table historique (exemple pour ts1)
+--
+CREATE TABLE ts1_village (
+	fid INT(9) NOT NULL,
+	x SMALLINT(3) NOT NULL,
+	y SMALLINT(3) NOT NULL,
+	tid TINYINT(1) NOT NULL,
+	vid INT(9) NOT NULL,
+	villagename VARCHAR(20) NOT NULL,
+	uid INT(9) NOT NULL,
+	accountname VARCHAR(20) NOT NULL,
+	aid INT(9) NOT NULL DEFAULT '0',
+	alliancename VARCHAR(8) NOT NULL DEFAULT '',
+	population SMALLINT(4) NOT NULL,
+	inactive SMALLINT(4) NOT NULL DEFAULT 0,
+	history_1 INT(4) NOT NULL DEFAULT 0,
+	PRIMARY KEY (vid),
+	KEY x (x),
+	KEY y (y),
+	KEY fid (fid),
+	KEY villagename (villagename),
+	KEY uid (uid),
+	KEY aid (aid),
+	KEY population (population),
+	KEY inactive (inactive),
+	KEY history_1 (history_1)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+--
+-- Création de la table comptes (exemple pour ts1)
+--
+CREATE TABLE ts1_account (
+	uid INT(9) NOT NULL,
+	tid TINYINT(1) NOT NULL,
+	aid INT(9) NOT NULL DEFAULT '0',
+	alliancename VARCHAR(8) NOT NULL DEFAULT '',
+	accountname VARCHAR(20) NOT NULL,
+	villages SMALLINT(3) NOT NULL DEFAULT 0,
+	accountpopulation SMALLINT(6) NOT NULL DEFAULT 0,
+	accountinactive SMALLINT(4) NOT NULL DEFAULT 0,
+	history_1 INT(6) NOT NULL DEFAULT 0,
+	PRIMARY KEY (uid),
+	KEY tid (tid),
+	KEY aid (aid),
+	KEY alliancename (alliancename),
+	KEY accountname (accountname),
+	KEY villages (villages),
+	KEY accountpopulation (accountpopulation),
+	KEY accountinactive (accountinactive),
+	KEY history_1 (history_1)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
