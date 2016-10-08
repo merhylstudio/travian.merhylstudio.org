@@ -92,25 +92,34 @@ if (isset($_POST["submit"]))
   echo '<div class="container-fluid bg-lightblue">'.PHP_EOL;
 
   $ret = Inactive::get($world, $sx, $sy, $sdl, $sdh, $spl, $sph);
-  
+//  var_dump($ret);
   # Affichage
   echo '<div class="col-xs-10 col-xs-offset-1">'.PHP_EOL;
-  echo '<table border=1 class="normal">'.PHP_EOL;
-  echo '<tr class="bgTrue titre3"><td>x</td><td>y</td><td>Village</td><td>Joueur</td><td>Alliance</td><td>Pop</td><td>Lien</td></tr>'.PHP_EOL;
+  echo '<table border=1 class="table">'.PHP_EOL;
+  echo '<thead>
+  <tr>
+    <th>x</th>
+    <th>y</th>
+    <th>Village</th>
+    <th>Joueur</th>
+    <th>Alliance</th>
+    <th>Population</th>
+  </tr>
+</thead>
+<tbody>'.PHP_EOL;
 
-  while ($it = array_pop($ret))
+  foreach ($ret as $it)
   {
     echo '<tr>';
     echo '<td>'.$it['x'].'</td>';
     echo '<td>'.$it['y'].'</td>';
-    echo '<td>'.utf8_encode($it['villagename']).'</td>';
-    echo '<td>'.utf8_encode($it['accountname']).'</td>';
-    echo '<td>'.utf8_encode($it['alliancename']).'</td>';
+    echo '<td><a target="_blank" href="http://'.$world.'.travian.'.$country.'/position_details.php?x='.$it['x'].'&y='.$it['y'].'">'.utf8_encode($it['villagename']).'</td>';
+    echo '<td><a target="_blank" href="http://'.$world.'.travian.'.$country.'/spieler.php?uid='.$it['uid'].'">'.utf8_encode($it['accountname']).'</a></td>';
+    echo '<td><a target="_blank" href="http://'.$world.'.travian.'.$country.'/allianz.php?aid='.$it['aid'].'">'.utf8_encode($it['alliancename']).'</td>';
     echo '<td>'.$it['population'].'</td>';
-    echo '<td>'.'<a href="http://'.$world.'.travian.fr/position_details.php?x='.$it['x'].'&y='.$it['y'].'" target="_blank"><div class="normalBold">Aller au village</div></a>'.'</td>';
     echo '</tr>'.PHP_EOL;
   }
-  echo '</table>'.PHP_EOL;
+  echo '</tbody></table>'.PHP_EOL;
   echo '</div>'.PHP_EOL;
 
   echo '</div>'.PHP_EOL;
