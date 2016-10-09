@@ -95,11 +95,11 @@ if (isset($_POST["submit"]))
 //  var_dump($ret);
   # Affichage
   echo '<div class="col-xs-10 col-xs-offset-1">'.PHP_EOL;
-  echo '<table border=1 class="table">'.PHP_EOL;
+  echo '<table border=1 class="table table-bordered table-condensed table-hover">'.PHP_EOL;
   echo '<thead>
   <tr>
-    <th>x</th>
-    <th>y</th>
+    <th class="text-center">x</th>
+    <th class="text-center">y</th>
     <th>Village</th>
     <th>Joueur</th>
     <th>Alliance</th>
@@ -111,12 +111,29 @@ if (isset($_POST["submit"]))
   foreach ($ret as $it)
   {
     echo '<tr>';
-    echo '<td>'.$it['x'].'</td>';
-    echo '<td>'.$it['y'].'</td>';
-    echo '<td><a target="_blank" href="http://'.$world.'.travian.'.$country.'/position_details.php?x='.$it['x'].'&y='.$it['y'].'">'.utf8_encode($it['villagename']).'</td>';
-    echo '<td><a target="_blank" href="http://'.$world.'.travian.'.$country.'/spieler.php?uid='.$it['uid'].'">'.utf8_encode($it['accountname']).'</a></td>';
-    echo '<td><a target="_blank" href="http://'.$world.'.travian.'.$country.'/allianz.php?aid='.$it['aid'].'">'.utf8_encode($it['alliancename']).'</td>';
+
+    // Position
+    echo '<td class="text-center">'.$it['x'].'</td>';
+    echo '<td class="text-center">'.$it['y'].'</td>';
+
+    // Village
+    echo '<td><a target="_blank" href="http://'.$world.'.travian.'.$country.'/position_details.php?x='.$it['x'].'&y='.$it['y'].'">'.utf8_encode($it['villagename']).'</a></td>';
+
+    // Peuple
+    if     ($it['tid'] == 1) echo '<td class="murRomain">';
+    elseif ($it['tid'] == 2) echo '<td class="murGermain">';
+    elseif ($it['tid'] == 3) echo '<td class="murGaulois">';
+    elseif ($it['tid'] == 5) echo '<td class="murNatar">';
+
+    // Joueur
+    echo '<a class="peuple" target="_blank" href="http://'.$world.'.travian.'.$country.'/spieler.php?uid='.$it['uid'].'">&#32;'.utf8_encode($it['accountname']).'</a></td>';
+
+    // Alliance
+    echo '<td><a target="_blank" href="http://'.$world.'.travian.'.$country.'/allianz.php?aid='.$it['aid'].'">'.utf8_encode($it['alliancename']).'</a></td>';
+
+    // Population
     echo '<td>'.$it['population'].'</td>';
+
     echo '</tr>'.PHP_EOL;
   }
   echo '</tbody></table>'.PHP_EOL;

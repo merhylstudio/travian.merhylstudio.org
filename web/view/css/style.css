@@ -157,3 +157,29 @@ footer .logo {
 .scrollup:focus {
   outline:none;
 }
+
+/* Specifique Travian */
+.peuple
+{
+  padding-left: 50px;
+}
+.murRomain
+{
+	height: 32px;
+	background: url(../img/travian/murromain.png) no-repeat;
+}
+.murGermain
+{
+	height: 32px;
+	background: url(../img/travian/murgermain.png) no-repeat;
+}
+.murGaulois
+{
+	height: 32px;
+	background: url(../img/travian/murgaulois.png) no-repeat;
+}
+.murNatar
+{
+	height: 32px;
+	background: url(../img/travian/murnatar.png) no-repeat;
+}
