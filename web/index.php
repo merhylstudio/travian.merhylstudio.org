@@ -10,7 +10,7 @@
 <?php include 'view/navbar.php'; ?>
 
 <!-- topbar -->
-<?php include 'view/inactiveform.php'; ?>
+
 
 <!-- corps -->
 <div class="container-fluid bg-lightblue">

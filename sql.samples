@@ -44,9 +44,9 @@ CREATE TABLE x_world (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Création de la table correspondante à x_world (exemple pour ts1)
+-- Création de la table correspondante à x_world (exemple pour ts4)
 --
-CREATE TABLE ts1_world (
+CREATE TABLE ts4_world (
 	fid			INT(9)		UNSIGNED NOT NULL DEFAULT 0,
 	x			SMALLINT(3)	NOT NULL DEFAULT 0,
 	y			SMALLINT(3)	NOT NULL DEFAULT 0,
@@ -62,9 +62,9 @@ CREATE TABLE ts1_world (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Création de la table historique (exemple pour ts1)
+-- Création de la table historique (exemple pour ts4)
 --
-CREATE TABLE ts1_history (
+CREATE TABLE ts4_history (
 	fid INT(9) UNSIGNED NOT NULL DEFAULT 0,
 	x SMALLINT(3) NOT NULL DEFAULT 0,
 	y SMALLINT(3) NOT NULL DEFAULT 0,
@@ -81,9 +81,9 @@ CREATE TABLE ts1_history (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Création de la table alliance (exemple pour ts1)
+-- Création de la table alliance (exemple pour ts4)
 --
-CREATE TABLE ts1_alliance (
+CREATE TABLE ts4_alliance (
 	aid INT(9) UNSIGNED NOT NULL DEFAULT 0,
 	alliancename VARCHAR(8) NOT NULL DEFAULT '',
 	alliancepopulation INT(6) UNSIGNED NOT NULL DEFAULT 0,
@@ -93,9 +93,9 @@ CREATE TABLE ts1_alliance (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Création de la table historique (exemple pour ts1)
+-- Création de la table historique (exemple pour ts4)
 --
-CREATE TABLE ts1_village (
+CREATE TABLE ts4_village (
 	fid INT(9) NOT NULL,
 	x SMALLINT(3) NOT NULL,
 	y SMALLINT(3) NOT NULL,
@@ -122,9 +122,9 @@ CREATE TABLE ts1_village (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Création de la table comptes (exemple pour ts1)
+-- Création de la table comptes (exemple pour ts4)
 --
-CREATE TABLE ts1_account (
+CREATE TABLE ts4_account (
 	uid INT(9) NOT NULL,
 	tid TINYINT(1) NOT NULL,
 	aid INT(9) NOT NULL DEFAULT '0',
@@ -145,3 +145,18 @@ CREATE TABLE ts1_account (
 	KEY history_1 (history_1)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
+--
+-- Requète les inactifs (exemple pour ts4)
+--
+USE travian;
+SELECT x,y,uid,accountname,tid,villagename,aid,alliancename,population
+	FROM ts4_village
+	WHERE inactive>0;
+    
+SELECT COUNT(*)
+	FROM ts4_village
+	WHERE inactive>0;
+   
+--
+--
+--
