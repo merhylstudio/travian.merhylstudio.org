@@ -92,17 +92,25 @@
     <div class="col-sm-2 col-sm-offset-2">
         <label class="control-label">Peuples:</label>
     </div>
-    <div class="col-xs-5 col-xs-offset-1 col-sm-3 col-sm-offset-0">
-        <div class="input-group">
-            <span class="input-group-addon">min</span>
-            <input type="text" class="form-control" name="spl" id="spl" value="<?php echo $spl; ?>" >
-        </div>
+    <div class="col-xs-3 col-sm-2 col-sm-offset-0">
+      <div class="checkbox">
+        <label><input type="checkbox"> Gaulois</label>
+      </div>
     </div>
-    <div class="col-xs-5 col-sm-3">
-        <div class="input-group">
-            <span class="input-group-addon">max</span>
-            <input type="text" class="form-control" name="sph" id="sph" value="<?php echo $sph; ?>" >
-        </div>
+    <div class="col-xs-3 col-sm-2">
+      <div class="checkbox">
+        <label><input type="checkbox"> Germains</label>
+      </div>
+    </div>
+    <div class="col-xs-3 col-sm-2">
+      <div class="checkbox">
+        <label><input type="checkbox"> Romains</label>
+      </div>
+    </div>
+    <div class="col-xs-3 col-sm-2 col-sm-offset-4">
+      <div class="checkbox">
+        <label><input type="checkbox"> Natars</label>
+      </div>
     </div>
   </div>
   <div class="form-group">

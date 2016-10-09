@@ -149,9 +149,10 @@ CREATE TABLE ts4_account (
 -- Requète les inactifs (exemple pour ts4)
 --
 USE travian;
-SELECT x,y,uid,accountname,tid,villagename,aid,alliancename,population
+SELECT x,y,@sqrtDistance := POW(x-50,2)+POW(y-50,2),uid,accountname,tid,villagename,aid,alliancename,population
 	FROM ts4_village
-	WHERE inactive>0;
+	WHERE inactive > 0
+    AND @sqrtDistance < POW(24,2);
     
 SELECT COUNT(*)
 	FROM ts4_village
