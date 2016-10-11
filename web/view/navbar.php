@@ -15,10 +15,10 @@
   <div class="collapse navbar-collapse" id="navbar">
     <ul class="nav navbar-nav">
       <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Server
-            <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Serveur
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
 <?php
 include_once './controler/worldcookie.php';
 
@@ -42,14 +42,15 @@ foreach ($server_list as $c => $country_server_list)
 {
   foreach ($country_server_list as $w)
   {
-            echo '<li><a href="index.php?w='.$w.'&c='.$c.'"><img class="flag" src="view/img/flags/'.$c.'.png"> '.$w.'</a></li>'.PHP_EOL;
+            echo '<li><a href="inactives.php?w='.$w.'&c='.$c.'"><img class="flag" src="view/img/flags/'.$c.'.png"> '.$w.'</a></li>'.PHP_EOL;
   }
 }
 ?>
-          </ul>
-        </li>
-      <li><a href="tools.php">Tools</a></li>
-      <li><a href="help.php">Help</a></li>
+        </ul>
+      </li>
+      <li><a href="inactives.php">Inactifs</a></li>
+      <li><a href="tools.php">Outils</a></li>
+      <li><a href="help.php">Aide</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>

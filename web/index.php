@@ -10,12 +10,16 @@
 <?php include 'view/navbar.php'; ?>
 
 <!-- topbar -->
+<div class="container-fluid bg-nightblue">
 
 
+</div>
 <!-- corps -->
 <div class="container-fluid bg-lightblue">
 
-
+  <div class="text-center">
+    <h3>Choisissez un serveur</h3>
+  </div>
 
 </div>
 

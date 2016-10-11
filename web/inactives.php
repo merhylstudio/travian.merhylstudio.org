@@ -179,11 +179,11 @@ if (isset($_POST["submit"]))
 }
 else
 {
-  echo '<div class="container-fluid bg-lightblue">'.PHP_EOL;
+  echo '<div class="container-fluid bg-lightblue"><div class="text-center">'.PHP_EOL;
   
-  echo '<h3>Recherche d\'inactif</h3><p>Entrez vos critères de recherche</p>'.PHP_EOL;
+  echo '<h3>Recherche d\'inactifs</h3><p>Entrez vos critères de recherche</p>'.PHP_EOL;
   
-  echo '</div>'.PHP_EOL;
+  echo '</div></div>'.PHP_EOL;
 }
 ?>
 
