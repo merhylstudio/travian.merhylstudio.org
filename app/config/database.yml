@@ -1,5 +1,5 @@
 dbtravian:
-  - host: mariadb
-  - user: travian
-  - pass: travian
-  - inst: travian
+  host: mariadb
+  user: travian
+  pass: travian
+  inst: travian
