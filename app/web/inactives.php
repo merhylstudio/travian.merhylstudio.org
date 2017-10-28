@@ -127,7 +127,7 @@ if (isset($_POST["submit"]))
   include_once './controler/classLoader.php';
   echo '<div class="container-fluid bg-lightblue">'.PHP_EOL;
 
-  $ret = Inactive::get($world, $sx, $sy, $sdl, $sdh, $spl, $sph);
+  $ret = Inactive::get($world.'travian'.$country, $sx, $sy, $sdl, $sdh, $spl, $sph);
 //  var_dump($ret);
   # Affichage
   echo '<div class="col-xs-10 col-xs-offset-1">'.PHP_EOL;
