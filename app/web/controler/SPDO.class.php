@@ -43,13 +43,13 @@ const DATABASE = 'agenda';
      * @return void
      * @see PDO::__construct()
      */
-private function __construct() {  
+private function __construct() {
   $param = yaml_parse_file("../config/database.yml");
   $host = $param["dbtravian"]["host"];
   $user = $param["dbtravian"]["Wuser"];
   $pass = $param["dbtravian"]["Wpass"];
   $inst = $param["dbtravian"]["inst"];
-  
+
   try {
     $this->PDOInstance = new PDO('mysql:dbname='.$inst.';host='.$host,$user,$pass);
     $this->PDOInstance->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
