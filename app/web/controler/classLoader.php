@@ -1,7 +1,7 @@
 <?php
-function loadClass($nom) 
+function loadClass($nom)
 {
-	include_once $nom.'.class.php'; // Inclut les classes dans la page ou il est appelé
+	include_once $nom.'.class.php'; // Inclut les classes dans la page ou il est appelÃ©
 }
 spl_autoload_register('loadClass') // Enregistre la fonction en __autoload()
 ?>

@@ -15,7 +15,7 @@ class Village
     $this->$allianceName = $allianceName;
     $this->$pop = $pop;
   }
-  
+
   public var $tid;
   public var $x;
   public var $y;

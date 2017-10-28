@@ -1,6 +1,6 @@
 <?php
 class Mail {
-	
+
 public $lastname;  // nom
 public $firstname; // prenom
 public $phone;     // numero de telephone
@@ -66,5 +66,5 @@ public static function send()
     echo " <br><br><p id='msgEnvoyer'>Une erreur est survenu lors de l'envoie.</p>";
   }
 }
-}	
+}
 ?>.

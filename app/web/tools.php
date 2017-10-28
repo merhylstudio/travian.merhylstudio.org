@@ -18,7 +18,7 @@
 <div class="text-center">
   <h1>En construction...</h1>
 </div>
-  
+
 </div>
 
 <!-- footer -->

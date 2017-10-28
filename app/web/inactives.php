@@ -9,7 +9,7 @@
 <!-- navbar -->
 <?php include 'view/navbar.php'; ?>
 
-<?php    
+<?php
   if (isset($_POST["submit"]))
   {
     if(isset($_POST["sx"]))  { $sx  = $_POST["sx"];  setcookie("sx",  $sx,  time()+864000); } else $sx  = 0;
@@ -22,9 +22,9 @@
   else
   {
     if(isset($_COOKIE["sx"]))  $sx  = $_COOKIE["sx"];  else $sx  = 0;
-    if(isset($_COOKIE["sy"]))  $sy  = $_COOKIE["sy"];  else $sy  = 0;    
+    if(isset($_COOKIE["sy"]))  $sy  = $_COOKIE["sy"];  else $sy  = 0;
     if(isset($_COOKIE["sdl"])) $sdl = $_COOKIE["sdl"]; else $sdl = 0;
-    if(isset($_COOKIE["sdh"])) $sdh = $_COOKIE["sdh"]; else $sdh = 60;    
+    if(isset($_COOKIE["sdh"])) $sdh = $_COOKIE["sdh"]; else $sdh = 60;
     if(isset($_COOKIE["spl"])) $spl = $_COOKIE["spl"]; else $spl = 0;
     if(isset($_COOKIE["sph"])) $sph = $_COOKIE["sph"]; else $sph = 1500;
   }
@@ -180,9 +180,9 @@ if (isset($_POST["submit"]))
 else
 {
   echo '<div class="container-fluid bg-lightblue"><div class="text-center">'.PHP_EOL;
-  
+
   echo '<h3>Recherche d\'inactifs</h3><p>Entrez vos critères de recherche</p>'.PHP_EOL;
-  
+
   echo '</div></div>'.PHP_EOL;
 }
 ?>

@@ -1,9 +1,9 @@
 function controle()
 {
-	nom = document.getElementById('nom').value; 
-	prenom = document.getElementById('prenom').value; 
-	tel = document.getElementById('phone').value; 
-	mail =  document.getElementById('email').value; 
+	nom = document.getElementById('nom').value;
+	prenom = document.getElementById('prenom').value;
+	tel = document.getElementById('phone').value;
+	mail =  document.getElementById('email').value;
 	msg =  document.getElementById('msg').value;
 	if (nom == '')
 	{
@@ -18,7 +18,7 @@ function controle()
 		document.getElementById('prenom').style.border='solid 2px red' ;
 		return false;
 		error =1;
-	}	
+	}
 	if ( tel =='')
 	{
 		alert ('Requis : téléphone');
@@ -40,5 +40,4 @@ function controle()
 		return false;
 		error =1;
 	}
-} 
-
+}

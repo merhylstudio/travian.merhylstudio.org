@@ -7,12 +7,12 @@ class Coord
     $this->$x = $x;
     $this->$y = $y;
   }
-  
+
   public function get()
   {
     return array($x, $y);
   }
-  
+
   public function getX()
   {
     return $x;

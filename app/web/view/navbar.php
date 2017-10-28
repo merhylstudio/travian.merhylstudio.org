@@ -1,7 +1,7 @@
 <nav class="container-fluid navbar navbar-default navbar-fixed-top">
 
   <div class="navbar-header">
-  
+
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
@@ -57,5 +57,5 @@ foreach ($server_list as $c => $country_server_list)
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
     </ul>
   </div>
-  
+
 </nav>

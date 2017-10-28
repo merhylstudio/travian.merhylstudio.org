@@ -4,10 +4,10 @@ include_once('controler/serverlist.php');
 function SetActiveWorld($world, $country)
 {
   if (!WorldExist($world, $country)) return false;
-  
+
   setcookie("world", $world, time()+864000);
   setcookie("country", $country, time()+864000);
-  return true;  
+  return true;
 }
 
 function GetActiveWorld()
@@ -21,10 +21,10 @@ function GetActiveWorld()
     }
   }
   // default
-  
+
   if (!isset($new_country)) $new_country = "";
   if (!isset($new_world)) $new_world = "";
-  
+
   if (!WorldExist($new_world, $new_country)) return array("ts4", "fr");
 
   return array($new_world, $new_country);

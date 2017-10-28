@@ -52,5 +52,5 @@ if ( isset($errMSG) ) {
       </div>
     </div>
   </form>
-  </div>	
+  </div>
 </div>
