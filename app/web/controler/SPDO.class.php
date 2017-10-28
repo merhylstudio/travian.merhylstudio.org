@@ -46,8 +46,8 @@ const DATABASE = 'agenda';
 private function __construct() {
   $param = yaml_parse_file("../config/database.yml");
   $host = $param["dbtravian"]["host"];
-  $user = $param["dbtravian"]["Wuser"];
-  $pass = $param["dbtravian"]["Wpass"];
+  $user = $param["dbtravian"]["user"];
+  $pass = $param["dbtravian"]["pass"];
   $inst = $param["dbtravian"]["inst"];
 
   try {
