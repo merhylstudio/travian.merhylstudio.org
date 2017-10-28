@@ -6,11 +6,11 @@ MAINTAINER Adrien Estanove <maghin@merhylstudio.com>
 RUN { \
     echo '<VirtualHost *:80>'; \
     echo 'ServerName travian'; \
-    echo 'DocumentRoot /var/www/html/app/web'; \
+    echo 'DocumentRoot /var/www/html/web'; \
     echo; \
-    echo '<Directory /var/www/html/app/web>'; \
+    echo '<Directory /var/www/html/web>'; \
     echo '\tOptions -Indexes'; \
-    echo '\tAllowOverride all'; \
+    echo '\tAllowOverride none'; \
     echo '</Directory>'; \
     echo '</VirtualHost>'; \
   } | tee "$APACHE_CONFDIR/sites-available/travian.conf" \
