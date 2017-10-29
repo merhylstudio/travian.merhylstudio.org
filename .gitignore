@@ -1,0 +1,10 @@
+# tmp files
+*~
+*.swp
+*.bkp
+
+# security files
+*.key
+
+# docker volumes
+volumes

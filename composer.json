@@ -1,5 +1,0 @@
-{
-	"require":  {
-		"phpauth/phpauth": ">0.1"
-	}
-}

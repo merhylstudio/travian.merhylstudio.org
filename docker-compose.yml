@@ -1,0 +1,43 @@
+version: '2'
+
+services:
+
+  db:
+    image: mariadb:10.2
+    environment:
+    - MYSQL_ROOT_PASSWORD=iop
+    - MYSQL_DATABASE=symfony
+    - MYSQL_USER=symfony
+    - MYSQL_PASSWORD=symfony
+    volumes:
+    - ./volumes/mariadb:/var/lib/mysql:z
+#    - ./initdb:/docker-entrypoint-initdb.d/:z
+
+  redis:
+    image: redis:alpine
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+    - db
+    ports:
+    - "8000:80"
+    volumes:
+    - ./volumes/phpmyadmin:/sessions:z
+
+  php:
+    image: merhylstudio:symfony-php-fpm
+    links:
+    - db
+    - redis
+    volumes:
+    - ./symfony:/var/www/symfony:z
+
+  nginx:
+    image: merhylstudio/symfony-nginx
+    ports:
+    - 8080:80
+    links:
+    - php
+    volumes_from:
+    - php
