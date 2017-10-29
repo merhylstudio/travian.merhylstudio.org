@@ -27,15 +27,6 @@ $ret = GetActiveWorld();
 $world = $ret[0];
 $country = $ret[1];
 
-if (isset($_GET["w"]) AND isset($_GET["c"]))
-{
-  if (SetActiveWorld($_GET["w"], $_GET["c"]))
-  {
-    $world = $_GET["w"];
-    $country = $_GET["c"];
-  }
-}
-
 echo 'world: '.$world.'<br />country: '.$country;
 
 foreach ($server_list as $c => $country_server_list)
