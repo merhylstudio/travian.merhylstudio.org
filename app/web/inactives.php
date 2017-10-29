@@ -1,4 +1,5 @@
 <?php
+include_once './controler/worldcookie.php';
 if (isset($_GET["w"]) AND isset($_GET["c"]))
 {
   if (SetActiveWorld($_GET["w"], $_GET["c"]))
