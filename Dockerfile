@@ -2,6 +2,18 @@ FROM php:7.1-apache
 
 MAINTAINER Adrien Estanove <maghin@merhylstudio.com>
 
+#=== Install PDO MySQL dependencie ===
+# mysql-client
+RUN docker-php-ext-install pdo_mysql
+
+#=== Install php YAML dependencie ===
+RUN buildRequirements="libyaml-dev" \
+	&& apt-get update && apt-get install -y ${buildRequirements} \
+	&& pecl install yaml \
+	&& echo "extension=yaml.so" > /usr/local/etc/php/conf.d/ext-yaml.ini \
+	&& apt-get purge -y ${buildRequirements} \
+	&& rm -rf /var/lib/apt/lists/*
+
 #=== Configure apache ===
 RUN { \
     echo '<VirtualHost *:80>'; \
